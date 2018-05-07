@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="0dp"
+              android:layout_height="match_parent" android:layout_weight="0.60">
+    <TextView
+            android:text="Min "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:id="@+id/min_text" android:layout_weight="0"
+            android:gravity="center_vertical" android:textColor="@android:color/black"/>
+    <EditText
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:ems="8"
+            android:id="@+id/min_edit" android:layout_weight="0" android:maxLength="2"
+            android:maxLines="1" android:gravity="center_vertical"
+            android:textColor="?android:attr/textColorHint"/>
+    <TextView
+            android:text="Max "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:id="@+id/max_text" android:layout_weight="0"
+            android:gravity="center_vertical" android:textColor="@android:color/black"/>
+    <EditText
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:ems="8"
+            android:id="@+id/max_edit" android:layout_weight="0" android:maxLength="2"
+            android:maxLines="1" android:gravity="center_vertical"
+            android:textColor="?android:attr/textColorHint"
+    />
+</LinearLayout>

@@ -1,0 +1,278 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-abr-2018, 2:44:00
+    Author     : SrWhi
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+table , tr {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+th,td  {
+    border-bottom: 1px solid #ddd;
+    font-size: 125%;
+    font-family: 'Varela';
+}
+
+.edad , .dni , .registro div, .nombreFull{
+    text-align: center;
+}
+
+.registro {
+    width: 20%;
+}
+
+.marco {
+    width: 90%;
+    height: 160px;
+    position: relative;  /* provide a positioning context */
+    overflow: hidden;       
+}
+
+.marco img {
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    -ms-transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);    
+}
+
+.registro img {
+    position: absolute;
+    left: -100%;         /* anchor the image corners outside the viewable area (increase for large images) */
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    height: 100%;       /* set height (swap these for variable height) */
+    margin: auto;        /* centre the image */
+    z-index: -1;
+}
+
+tr {
+           /* height: 20vh; */
+
+}
+.nombreFull div {
+    float: left;
+    width: 33%;
+}
+
+.info {
+    vertical-align: top;
+    font-size: 125%;
+    font-family: 'Varela';
+}
+
+.info strong {
+    font-weight: 900;
+}
+
+.info div {
+
+}
+
+.prueba {
+    vertical-align: bottom;
+    height: 100%;
+}
+
+.filtros {
+    font-family: 'Varela';
+    font-size: 125%;
+    height: 80px;
+    vertical-align: middle;
+    display: table-cell;
+    width: 100%;
+}
+
+.filtros div {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.filtros div input {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.marcarTodos {
+    padding-right: 100px;
+}
+
+#iconoFlotante {
+    position: absolute;
+    right: 5%;
+    width: 8%;
+    height: auto;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+.contenedor {
+    overflow: auto;
+    display: flex;
+    height: 80%;
+}
+
+.seleccionador {
+    vertical-align: top;
+    width: 30px;
+    padding-left: 20px;
+    padding-top: 14px;
+
+}
+
+.numRegistro {
+    background: white;
+}
+
+.gestion {
+    padding: 10px;
+}            
+
+.falta {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: auto;
+    background-image: url(/public/img/falta.png);    
+}
+
+#dialogoEnvio, #dialogoSombra {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.01);
+    bottom: 0;
+    display: none;/* por defecto */
+}
+
+#dialogoSombra div {
+    width: 800px;
+    height: 400px;
+    background: rgba(0,0,0,0.2);
+    margin: auto;
+    border-radius: 20px;                
+}
+
+.formulario {
+    height: 370px;
+    width: 780px;
+    background: white;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.formulario textarea {
+    margin: 10px; 
+    height: 50%; 
+    width: 97%; 
+    margin-left: 10px ; 
+    margin-bottom: 50px ; 
+    resize: none;
+}
+
+#dialogoConfirmacion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: none;
+}
+
+.formularioConfirmacion {
+    height: 330px;
+    width: 780px;
+    background: white;
+    margin: auto;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.confirmaEncabezado {
+    display: -webkit-inline-box;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+h1.titulo {
+    margin-left: 20px;
+    vertical-align: middle;
+    display: initial;
+}
+
+.formularioConfirmacion p {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 100px;
+}
+
+.formularioConfirmacion button {
+    font-size: 30px;
+    width: 150px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-device-width : 640px) {
+    .marco {
+        width: 90%;
+        height: 80px;
+        position: relative;  /* provide a positioning context */
+        overflow: hidden;       
+    }
+
+    .info {
+        vertical-align: top;
+        font-size: 70%;
+        font-family: 'Varela';
+    }
+
+    #iconoFlotante {
+        position: absolute;
+        right: 20px;
+        width: 80px;
+        height: auto;
+        bottom: 20px;
+        cursor: pointer;
+    }
+
+    input[type=checkbox] {
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);    
+    }
+
+    .formularioConfirmacion img {
+        width: 50px;
+    }
+
+    .formularioConfirmacion button {
+        font-size: 15px;
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .formularioConfirmacion {
+        height: 270px;
+        width: 780px;
+        background: white;
+        margin: auto;
+        border-radius: 20px;
+        border-style: solid;
+    }
+}

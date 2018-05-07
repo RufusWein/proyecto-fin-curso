@@ -1,0 +1,54 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@drawable/borde">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" app:srcCompat="@drawable/anonimo" android:id="@+id/retrato"
+                    android:layout_gravity="center_vertical|center_horizontal"/>
+
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" app:srcCompat="@drawable/falta" android:id="@+id/falta"
+                    android:layout_gravity="center_vertical|center_horizontal"/>
+            <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/checkBox" android:layout_weight="1"/>
+        </FrameLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Nombre Completo :"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/nombre_text" android:layout_weight="1"
+                    android:textAlignment="viewStart"/>
+            <TextView
+                    android:text="DNI : "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/dni_text" android:layout_weight="1"
+                    android:textAlignment="textStart" android:gravity="top"/>
+            <TextView
+                    android:text="Grupo : "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/grupo_text" android:layout_weight="1"
+                    android:textAlignment="textStart" android:gravity="top"/>
+            <TextView
+                    android:text="Edad : "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/edad_text" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

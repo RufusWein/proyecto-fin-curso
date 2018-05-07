@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">Student Manager</string>
+    <string name="action_settings">Settings</string>
+    <string name="sobre_la_aplicacion">
+        <![CDATA[
+        <b><u>Descripción de la aplicación</u></b>
+        <p>
+        Pasarela SMS propia. Lanzada desde la aplicación Android como un servicio. A su vez esta dispone de un sistema de notificaciones. Los sms pueden ser enviados desde la aplicación o recibirlos desde el servidor Web y enviarse también desde el mismo servicio.
+        </p>
+        <p>
+        La aplicación recoge información de los alumnos desde el servidor Web y permite gestionar la ausencia de éstos. La información es representada por una lista de alumnos que puede ser filtrada por Edad, Asistencia o Grupo. También se puede combinar el filtro por un sistema de ordenamiento por Nombre, Edad o Grupo de forma ascendente o descendente.
+        </p>
+        <p>
+        La aplicación dispone de un sistema de cacheado que permite mejorar la carga de imágenes e información. Solo la gestión de ausencia de alumnos funciona sin este sistema.
+        </p>
+        <b><u>Requisitos</u></b>
+        <ul>
+        <li>La aplicación solo funciona con internet. De no disponer de conexión de datos a Internet la aplicación no se iniciará y de perderla durante la actividad tenga cuidado ya que las ausencias quedarán sin efectos en la base de datos del servidor.
+        </li><li>La aplicación requiere importante cantidad de memoria tanto para el cacheado como para el alojamiento de las fotos de los estudiantes mostrados en el listado y también al comienzo durante la carga.
+        </li><li>La aceleración por hardware es opcional pero recomendada.
+        </li><li>En versiones de Android 6 o mayores es necesario comprobar los permisos para el envío de mensajes SMS y habilitarlo si fuera necesario para el correcto funcionamiento de la pasarela SMS. También es necesario disponer de saldo o de una tarifa plana de mensajería SMS.
+        </li></ul>
+        <b><u>Contacto</u></b>
+        <p>
+        Esta aplicación fue desarrollada por Pedro A.  Rodriguez para el proyecto de fin de curso de DAW en el Ies Zonzamas curso 2015-2018. <br>Correo electrónico : <a href="mailto:rgpedroa@gmail.com">rgpedroa@gmail.com</a>
+        </p>
+        ]]>
+    </string>
+
+    <string name="ayuda_aplicacion">
+        <![CDATA[
+<style>
+.centrado {
+    text-align :center;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+</style>
+<div class="centrado"><h1>Ayuda</h1>
+
+<b>Indice</b></div>
+
+<ul>
+<li><a href="#filtrado"><b>Filtrado</b></a></li>
+<li><a href="#f_asis"><b>Filtrar por asistencia</b></a></li>
+<li><a href="#f_grupo"><b>Filtrar por grupo</b></a></li>
+<li><a href="#f_edad"><b>Filtrar por edad</b></a></li>
+<li><a href="#ordenar"><b>Ordenamiento</b></a></li>
+<li><a href="#o_nombre"><b>Ordenar por nombre</b></a></li>
+<li><a href="#o_grupo"><b>Ordenar por grupo</b></a></li>
+<li><a href="#o_edad"><b>Ordenar por edad</b></a></li>
+<li><a href="#mensajes"><b>Mensajería</b></a></li>
+<li><a href="#m_email"><b>Envío de mensaje a un alumno via email</b></a></li>
+<li><a href="#m_sms"><b>Envío de mensaje a un alumno via SMS</b></a></li>
+<li><a href="#faltas"><b>Gestión de asistencia</b></a></li>
+<li><a href="#quitar_f"><b>Quitar Falta</b></a></li>
+<li><a href="#poner_f"><b>Poner falta</b></a></li>
+<li><a href="#extra"><b>Extra</b></a></li>
+<li><a href="#selec_alumnos"><b>Selección de alumnos</b></a></li>
+<li><a href="#actualizar"><b>Forzar la descarga de datos y actualización del cacheado</b></a></li>
+<li><a href="#background"><b>Funcionamiento en segundo plano</b></a></li>
+</ul>
+
+<b id="filtrado">Filtrado</b>
+<p>La aplicación permite mostrar solo alumnos que cumplan con determinados criterios indicados a continuación.</p>
+<img src="filtro.png"/><br>
+<b id="f_asis">Filtrado por asistencia</b>
+<p>Seleccione la opción asistencia y la aplicación mostrará por defecto los alumnos que de momento se encuentran en el centro o que no tienen falta a fecha actual.</p>
+<img src="ausente.png"/>
+<p>Active o habilite la casilla de la opción de <b>Asistencia</b>, ausentes, para mostrar los alumnos que están ausentes en el centro de estudio.
+</p>
+<b id="f_grupo">Filtrado por grupo</b>
+<p>La aplicación permite mostrar los alumnos que sólo se encuentren en determinado grupo escolar, para ello seleccione la opción de <b>Grupo</b> en el selector desplegable de filtro.
+</p><img src="grupo.png"/>
+<p>Y a continuación seleccione el grupo para mostrar los alumnos que se encuentran en este.
+</p>
+<b id="f_edad">Filtrado por edad</b>
+<p>La aplicación puede mostrar los alumnos que se encuentren en un determinado rango de edad.</p>
+<img src="edad.png"/>
+<p>Para indicar el rango mínimo de edad use el campo <b>min</b> y para el rango máximo de edad use el campo <b>max</b>. La lista se actualizará automáticamente siempre y cuando el valor mínimo sea igual o menor que el campo máximo, de lo contrario la aplicación ignora la operación.
+</p>
+<br>
+<b id="ordenar">Ordenamiento</b>
+<p>Esta aplicación también permite ordenar de forma ascendente o descendente en tres categorías.</p>
+<img src="ordenar.png"/><br>
+<b id="o_nombre">Ordenar por nombre</b>
+<p>El sistema de ordenamiento por nombre toma en cuenta este mismo campo y lo ordena alfabéticamente de forma ascendente o descendete.</p>
+<img src="nombre.png"/><br>
+<b id="o_grupo">Ordenar por grupo</b>
+<p>El sistema de ordenamiento por grupo toma en cuenta este mismo campo y lo ordena por orden alfabético de forma ascendente o descendete.</p>
+<img src="ogrupo.png"/><br>
+<b id="o_edad">Ordenar por edad</b>
+<p>El sistema de ordenamiento por edad toma en cuenta este mismo campo y lo ordena de mayor o menor.</p>
+<img src="oedad.png"/><br>
+<br><br>
+<b id="mensajes">Mensajería</b>
+<p>Para usar este servicio es requisisto obligado tener seleccionados los alumnos a los que desee comunicar algo, telemáticamente. El mensaje será enviado para todos los alumnos seleccionados y para ello simplemente debe pulsar sobre el icono flotante rosa que tiene como imagen un sobre. Después de esto se mostrará un diálogo donde podrá introducir el texto, el cual no podrá superar los 160 caracteres, y dos tipos de envío que se describen más abajo.</p>
+<img src="mensaje.png"/><br>
+<p>En cada envío se pide confirmación.</p>
+<b id="m_email">Envío de mensaje a un alumno via email</b>
+<p>Al pulsar sobre el botón <b>POR EMAIL</b> el mensaje será enviado al servidor Web y se envía a los alumnos por medio de la cuenta de correo que tenga configurada en ese momento.</p>
+<img src="poremail.png"/>
+<p>La aplicación no dispone de un control de envío y los alumnos deberán disponer de un correo electrónico que previamente habría sido registrado en la base de datos.</p>
+<b id="m_sms">Envío de mensaje a un alumno via SMS</b>
+<p>Al pulsar sobre el botón <b>POR SMS</b> el mensaje será enviado desde el propio dispositivo, por lo que el número reflejado será el asociado a la tarjeta SIM que use.</p>
+<img src="porsms.png"/>
+<p>La aplicación no dispone de un control de envío y sólo informará si el sistema operativo del dispositivo móvil deniega la acción. Los alumnos previamente habrían suministrado un número de teléfono que estaría registrado en la base de datos.</p>
+<br>
+<b id="faltas">Gestión de asistencia</b>
+<p>La aplicación tiene la principal función de gestionar la asistencia o faltas de alumnos del mismo día. A pesar de que las faltas se registran en la base de datos del servidor sólo se podrá consultar las faltas a fecha actual y se posibilita revocarlas en caso de error o justificación si se diera el caso.</p>
+<img src="faltas.png"/>
+<p>Para usar estas funciones pulse sobre el menú, los tres puntos en la esquina superior derecha. Se desplegará un listado de opciones donde se mostrarán las opciones <b>Quitar falta</b> y <b>Poner falta</b>.</p>
+<b id="quitar_f">Quitar Falta</b>
+<p>Seleccione los o él alumno marcado como ausente (con una X en rojo sobre la foto) y pulse sobre la <b>opción Quitar falta</b>.</p>
+<img src="ausentes.png"/><br>
+<b id="poner_f">Poner falta</b>
+<p>Seleccione los o él alumno ausente en ese momento y pulse sobre la opción <b>Quitar falta</b>.</p>
+<br>
+<b id="extra">Extra</b>
+</p>En este apartado se describen otras funcionalidades y algunas necesarias para el uso adecuado de esta aplicación.</p>
+<b id="selec_alumnos">Selección de alumnos</b>
+<p>Para la selección de alumnos, necesario para el envío de notificaciones o gestión de asistencia, puede bien marcar sobre el pequeño recuadro de cada registro del listado de alumnos, que sería la forma individual, o marcando todos, multiple, por medio de la casilla o pequeño recuadro que lleva de etiqueta <b>Todos</b>.</p>
+<img src="marcar.png"/>
+<p>La selección será efectiva cuando aparezca la imagen de <i>visto</i> sobre el recuadro de selección a la vez que el borde se colorea en rosa.</p>
+<b id="actualizar">Forzar la descarga de datos y actualización del cacheado</b>
+<p>La aplicación por motivo de rendimiento dispone de un sistema de <i>cacheado</i>. El sistema de cacheado consiste en guardar la información que necesita la aplicación de forma persistente en el dispositivo para trabajar y que se encuentra en la base de datos del servidor. Esto no influye en la gestión de asistencias ya que las faltas se tramitan directamente al servidor y no permanecen almacenadas en el dispositivo, pero habrá momentos en que pueda haber un ingreso de un nuevo alumno a fecha actual por los motivos que sean o la modificación de datos de determinados alumnos como foto, grupo o nombre entre otros, en ese caso deberá seleccionar el menú, esquina superior derecha, la opción <b>Actualizar datos</b>.</p>
+<img src="update.png"/>
+<p>El cacheado por cuestión de integridad tiene un <b>periodo de caducidad de 24 horas</b> y no es necesario que actualice cada día.</p>
+<b id="background">Funcionamiento en segundo plano</b>
+<p>Esta aplicación no está diseñada para un funcionamiento que no sea en primer plano o visible, pero internamente lanza un servicio o proceso en segundo plano que media constantemente, con un intervalo de un minuto, con el servidor para hacer las veces de <b>Pasarela SMS</b>. Dicha pasarela toma los mensajes de los usuarios que envíen notificaciones a los alumnos por medio de la aplicación Web o desde el navegador.</p>
+<p>Si necesita relizar otra tarea y no quiere cerrar la aplicación o salir de la misma puede usar el botón del dispositivo <b>HOME</b> (algunas veces el icono triangular) para dejar en un segundo plano la aplicación, aunque no es aconsejable.</p>
+        ]]>
+    </string>
+</resources>
